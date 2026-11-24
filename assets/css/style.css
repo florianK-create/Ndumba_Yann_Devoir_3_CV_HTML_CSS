@@ -50,7 +50,7 @@ header{
     align-items: center;
 }
 
-#photo{
+header > div{
     flex-basis: 30%;
     display: flex;
     flex-direction: row;
@@ -58,18 +58,18 @@ header{
     align-items: center;
 }
 
-#photo a img:hover{
+header > div a img:hover{
     cursor: zoom-in;
 }
 
-#photo img{
+header > div:nth-of-type(1) img{
     width: 130px;
     height: auto;
     border: 5px solid #ffffff;
     border-radius: 50%;
 }
 
-#presentation{
+header div:nth-of-type(2){
     color: #ffffff;
     flex-basis: 70%;
     display: flex;
@@ -78,7 +78,7 @@ header{
     align-items: center;
 }
 
-#presentation ul{
+header div:nth-of-type(2) ul{
     list-style-type: none;
     padding-left: 120px;
     padding-bottom: 30px;
@@ -88,7 +88,7 @@ header{
     row-gap: 10px;
 }
 
-#presentation ul li address, #presentation ul li{
+header div:nth-of-type(2) ul li address, header div:nth-of-type(2) ul li{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -97,12 +97,12 @@ header{
 }
 
 
-#presentation ul li address a{
+header div:nth-of-type(2) ul li address a{
     color: #ffffff;
     text-decoration: none;
 }
 
-#presentation ul li address img, #presentation ul li img{
+header div:nth-of-type(2) ul li address img, header div:nth-of-type(2) ul li img{
     width: 20px;
     height: 20px
 }
@@ -122,30 +122,30 @@ main h2{
     margin-bottom: 15px;
 }
 
-#left-bloc, #right-bloc{
+main div{
     padding: 20px 50px 60px;
 }
 
   /* bloc droit */
 
-#right-bloc{
+main div:nth-of-type(1){
     flex-basis: 70%;
     order: 2;
     background-color: #ffffff;
 }
 
-#right-bloc ul{
+main div:nth-of-type(1) ul{
     list-style-type: none;
     padding-left: 0;
 }
 
-#profil p{
+main div:nth-of-type(1) > section > p{
     text-align: justify;
     text-indent: 30px;
     font-weight: 500;
 }
 
-.period{
+main div:nth-of-type(1) section ul li p:nth-of-type(2){
     color: #17abb3;
     font-size: larger;
     font-weight: 500;
@@ -154,18 +154,18 @@ main h2{
     justify-content: end;
 }
 
-#right-bloc section ul li{
+main div:nth-of-type(1) section ul li{
     display: flex;
     flex-direction: row;
     padding: 0 10px;
 }
 
-#right-bloc section ul li:hover{
+main div:nth-of-type(1) section ul li:hover{
     background-color: #e3e3e3;
     border-left: 5px solid #17abb3;
 }
 
-#right-bloc section ul li p{
+main div:nth-of-type(1) section ul li p{
     flex-basis: 100%;
 }
 
@@ -175,13 +175,34 @@ em{
 
   /* bloc gauche */
 
-  #left-bloc{
+main div:nth-of-type(2){
     flex-basis: 30%;
     order: 1;
     background-color: #f5f5f5;
 }
 
+main div:nth-of-type(2) section:nth-of-type(1) > ul, main div:nth-of-type(2) section:nth-of-type(2) > ul{
+    list-style-type: none;
+    padding-left: 0;
+}
 
+main div:nth-of-type(2) section:nth-of-type(1) > ul li, main div:nth-of-type(2) section:nth-of-type(2) > ul li{
+    display: flex;
+    flex-direction: row;  
+}
+
+main div:nth-of-type(2) section:nth-of-type(1) > ul li span, main div:nth-of-type(2) section:nth-of-type(2) > ul li span{
+    flex-basis: 100%;
+}
+
+main div:nth-of-type(2) section:nth-of-type(1) > ul li span:nth-of-type(1), main div:nth-of-type(2) section:nth-of-type(2) > ul li span:nth-of-type(1){
+    font-weight: 600;
+}
+
+
+main div:nth-of-type(2) section:nth-of-type(1) > ul li span:nth-of-type(2){
+    color: #17abb3;
+}
 
 /* pied du cv */
 
