@@ -40,6 +40,76 @@ header, footer{
     background-color: #17abb3;
 }
 
+/* en tete */
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo{
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo a img:hover{
+    cursor: zoom-in;
+}
+
+#photo img{
+    width: 130px;
+    height: auto;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+}
+
+#presentation{
+    color: #ffffff;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#presentation ul{
+    list-style-type: none;
+    padding-left: 120px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+}
+
+#presentation ul li address, #presentation ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+
+#presentation ul li address a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#presentation ul li address img, #presentation ul li img{
+    width: 20px;
+    height: 20px
+}
+
+
+ /* corps du cv */
+
 main{
     display: flex;
     flex-direction: row;
@@ -58,22 +128,12 @@ main{
     background-color: #ffffff;
 }
 
-header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#photo{
-    flex-basis: 30%;
-}
-
-#presentation{
-    flex-basis: 70%;
-}
+/* pied du cv */
 
 footer, small{
     display: block;
     justify-items: center;
 }
+
+
 
