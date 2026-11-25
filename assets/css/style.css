@@ -1,0 +1,241 @@
+/* polices */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "raleway";
+  src: url("../polices/Raleway-VariableFont_wght.woff2") format("woff2"),
+        url("../polices/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "raleway";
+  src: url("../polices/Raleway-Italic-VariableFont_wght.woff2") format("woff2"),
+        url("../polices/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+/* Positionnement et couleurs géneraux */
+
+body {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+h1, h2{
+    font-family: "lato", sans-serif;
+}
+
+section{
+    font-family: "raleway", sans-serif;
+}
+
+ul, h1{
+    margin: 0 auto;  
+}
+
+header, footer{
+    background-color: #17abb3;
+}
+
+/* en tete */
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header > div{
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header > div a img:hover{
+    cursor: zoom-in;
+}
+
+header > div:nth-of-type(1) img{
+    width: 130px;
+    height: auto;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+}
+
+header div:nth-of-type(2){
+    color: #ffffff;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header div:nth-of-type(2) ul{
+    list-style-type: none;
+    padding-left: 120px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+}
+
+header div:nth-of-type(2) ul li address, header div:nth-of-type(2) ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+
+header div:nth-of-type(2) ul li address a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header div:nth-of-type(2) ul li address img, header div:nth-of-type(2) ul li img{
+    width: 20px;
+    height: 20px
+}
+
+
+/* corps du cv */
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+main h2{
+    color: #17abb3;
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+main div{
+    padding: 20px 50px 60px;
+}
+
+  /* bloc droit */
+
+.right-bloc{
+    flex-basis: 70%;
+    order: 2;
+    background-color: #ffffff;
+}
+
+.right-bloc ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.right-bloc > section > p{
+    text-align: justify;
+    text-indent: 30px;
+    font-weight: 500;
+}
+
+.right-bloc section ul li p:nth-of-type(2){
+    color: #17abb3;
+    font-size: larger;
+    font-weight: 500;
+    text-align: right;
+}
+
+.right-bloc section ul li{
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+.right-bloc section ul li:hover{
+    background-color: #e3e3e3;
+    border-left: 5px solid #17abb3;
+}
+
+.right-bloc section ul li p{
+    flex-basis: 50%;
+}
+
+.right-bloc em{
+    font-size: smaller;
+}
+
+  /* bloc gauche */
+
+.left-bloc{
+    flex-basis: 30%;
+    order: 1;
+    background-color: #f5f5f5;
+}
+
+.left-bloc section:nth-of-type(1) > ul, .left-bloc section:nth-of-type(2) > ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.left-bloc section:nth-of-type(1) > ul li, .left-bloc section:nth-of-type(2) > ul li{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding: 2px;
+    margin: 2px; 
+}
+
+.left-bloc section:nth-of-type(1) > ul li span:nth-of-type(2), .left-bloc section:nth-of-type(2) > ul li span:nth-of-type(2){
+    flex-basis: 70%;
+    font-weight: 500;
+    text-align: right;
+}
+
+.left-bloc section:nth-of-type(1) > ul li span:nth-of-type(1), .left-bloc section:nth-of-type(2) > ul li span:nth-of-type(1){
+    font-weight: 700;
+    flex-basis: 30%;
+}
+
+
+.left-bloc section:nth-of-type(1) > ul li span:nth-of-type(2){
+    color: #17abb3;
+    font-size: larger;
+}
+
+.left-bloc section:nth-of-type(3) > ul, .left-bloc section:nth-of-type(4) > ul{
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.left-bloc section:nth-of-type(3) > ul li::marker, .left-bloc section:nth-of-type(4) > ul li::marker{
+    color: #17abb3;
+    font-size: larger;
+}
+
+/* pied du cv */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+small{
+    color: #ffffff;
+    font-style: italic;
+}
+
+footer div a:hover{
+    opacity: 80%;
+}
+
+
+
