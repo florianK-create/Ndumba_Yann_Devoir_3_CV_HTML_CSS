@@ -128,87 +128,104 @@ main div{
 
   /* bloc droit */
 
-main div:nth-of-type(1){
+.right-bloc{
     flex-basis: 70%;
     order: 2;
     background-color: #ffffff;
 }
 
-main div:nth-of-type(1) ul{
+.right-bloc ul{
     list-style-type: none;
     padding-left: 0;
 }
 
-main div:nth-of-type(1) > section > p{
+.right-bloc > section > p{
     text-align: justify;
     text-indent: 30px;
     font-weight: 500;
 }
 
-main div:nth-of-type(1) section ul li p:nth-of-type(2){
+.right-bloc section ul li p:nth-of-type(2){
     color: #17abb3;
     font-size: larger;
     font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
+    text-align: right;
 }
 
-main div:nth-of-type(1) section ul li{
+.right-bloc section ul li{
     display: flex;
     flex-direction: row;
     padding: 0 10px;
 }
 
-main div:nth-of-type(1) section ul li:hover{
+.right-bloc section ul li:hover{
     background-color: #e3e3e3;
     border-left: 5px solid #17abb3;
 }
 
-main div:nth-of-type(1) section ul li p{
-    flex-basis: 100%;
+.right-bloc section ul li p{
+    flex-basis: 50%;
 }
 
-em{
+.right-bloc em{
     font-size: smaller;
 }
 
   /* bloc gauche */
 
-main div:nth-of-type(2){
+.left-bloc{
     flex-basis: 30%;
     order: 1;
     background-color: #f5f5f5;
 }
 
-main div:nth-of-type(2) section:nth-of-type(1) > ul, main div:nth-of-type(2) section:nth-of-type(2) > ul{
+.left-bloc section:nth-of-type(1) > ul, .left-bloc section:nth-of-type(2) > ul{
     list-style-type: none;
     padding-left: 0;
 }
 
-main div:nth-of-type(2) section:nth-of-type(1) > ul li, main div:nth-of-type(2) section:nth-of-type(2) > ul li{
+.left-bloc section:nth-of-type(1) > ul li, .left-bloc section:nth-of-type(2) > ul li{
     display: flex;
-    flex-direction: row;  
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding: 2px;
+    margin: 2px; 
 }
 
-main div:nth-of-type(2) section:nth-of-type(1) > ul li span, main div:nth-of-type(2) section:nth-of-type(2) > ul li span{
-    flex-basis: 100%;
+.left-bloc section:nth-of-type(1) > ul li span:nth-of-type(2), .left-bloc section:nth-of-type(2) > ul li span:nth-of-type(2){
+    flex-basis: 70%;
+    font-weight: 500;
+    text-align: right;
 }
 
-main div:nth-of-type(2) section:nth-of-type(1) > ul li span:nth-of-type(1), main div:nth-of-type(2) section:nth-of-type(2) > ul li span:nth-of-type(1){
-    font-weight: 600;
+.left-bloc section:nth-of-type(1) > ul li span:nth-of-type(1), .left-bloc section:nth-of-type(2) > ul li span:nth-of-type(1){
+    font-weight: 700;
+    flex-basis: 30%;
 }
 
 
-main div:nth-of-type(2) section:nth-of-type(1) > ul li span:nth-of-type(2){
+.left-bloc section:nth-of-type(1) > ul li span:nth-of-type(2){
     color: #17abb3;
+    font-size: larger;
+}
+
+.left-bloc section:nth-of-type(3) > ul, .left-bloc section:nth-of-type(4) > ul{
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.left-bloc section:nth-of-type(3) > ul li::marker, .left-bloc section:nth-of-type(4) > ul li::marker{
+    color: #17abb3;
+    font-size: larger;
 }
 
 /* pied du cv */
 
-footer, small{
-    display: block;
-    justify-items: center;
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 small{
@@ -216,7 +233,7 @@ small{
     font-style: italic;
 }
 
-.social-media a:hover{
+footer div a:hover{
     opacity: 80%;
 }
 
